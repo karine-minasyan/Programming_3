@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #weatherInfo {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <h1>Ծրագրավորում III Երևան</h1>
+            </tr>
+            <tr>
+                <h1>Կարինե Տեր-Մինասյան</h1>
+            </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Գույն</th>
+                <th scope="col">Նկարագրություն</th>
+                <th scope="col">Ծնվել է</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td scope="row" style="background-color:green;"></td>
+                <td>Կանաչը խոտն է, որը բազմանում է 5 ցիկլը մեկ,մահանում է երբ նրան ուտում է խոտակերը, կամ այրում է կրակը,
+                    կամ նրան կոխկրտում է գիշատիչը, ամառը և գարունը կանաչ է, աշունը՝ դեղին, ձմեռը՝ սպիտակ</td>
+                <td id="grassCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:orange;"></td>
+                <td>Նարնջագույնը խոտակերն է, որը բազմանում է գարնանն ու ամռանը, երբ էներգիան 20-ից ավել է և մահանում է, երբ
+                    0 է, կամ երբ նրան ուտում է գիշատիչը, կամ երբ նրան ոչնչացնում է պայթուցիկը</td>
+                <td id="grassEaterCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:red;"></td>
+                <td>Կարմիրը գիշատիչն է, որը բազմանում է, երբ էներգիան 20-ից ավել է և մահանում է, երբ 0 է, կամ երբ նրան ոչնչացնում
+                    է պայթուցիկը, ամռանը չի շարժվում</td>
+                <td id="predatorCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:blue;"></td>
+                <td>Կապույտը պայթուցիկն է, որը պայթում է ձմռանը 5 ցիկլ հետո և պայթեցնում է իր շուրջը գտնվող բոլոր կերպարներին</td>
+                <td id="explosiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:purple;"></td>
+                <td>Մանուշակագույնը հավասարակշռություն ապահովողն է, որն իր անցած ճանապարհի վրա ստեղծում է խոտ, եթե խոտակերները
+                    ավելի շատ են քան խոտերը, և ստեղծում է խոտակեր, եթե խոտերը ավելի շատ են քան խոտակերները, իսկ եթե խոտերի
+                    ու խոտակերների քանակները հավասար են, ապա ստեղծում է պայթուցիկ</td>
+                <td id="balancerCount"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="weatherInfo"></div>
+    <script src="p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
